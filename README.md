@@ -52,14 +52,14 @@ Implement Redis caching for the `GET /papers/{paper_id}` endpoint. Include cache
 ## API Documentation
 
 Generate and provide interactive API documentation using Swagger UI/Redoc (via FastAPI).
-
+<!-- 
 ## Brownie Points (Optional Features)
 
 1. Enhanced Gemini Prompts: Experiment with different prompt engineering techniques to improve extraction accuracy.
 2. Search Functionality: Implement full-text search capabilities on the question and answer fields.
 3. Rate Limiting: Implement rate limiting to prevent API abuse.
 4. Schema Validation and Error Handling: Implement advanced schema validation and error handling.
-5. Security Considerations: Implement basic security measures.
+5. Security Considerations: Implement basic security measures. -->
 
 ## Technology Stack
 
@@ -68,7 +68,7 @@ Generate and provide interactive API documentation using Swagger UI/Redoc (via F
 - Pydantic
 - MongoDB
 - Redis
-- Gemini Python library
+- OpenAI Python library
 - Asynchronous processing libraries
 - Pytest for testing
 

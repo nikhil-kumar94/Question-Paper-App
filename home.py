@@ -6,8 +6,16 @@ from fastapi import FastAPI, UploadFile, File, BackgroundTasks
 from celery.result import AsyncResult
 from gemini_tasks import extract_pdf_task ,celery_app, extract_text_task
 import json
+from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI()
+app = FastAPI(swagger_ui_parameters={"syntaxHighlight.theme": "obsidian"})
+app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 redis_client = Redis(host='localhost', port=6379)
 mongo_client = MongoClient('mongodb://localhost:27017/')
 db = mongo_client['sample_papers_db']
